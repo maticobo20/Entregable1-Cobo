@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+        <div class="botones">
+            <button onclick="jugar('piedra')">Piedra</button>
+            <button onclick="jugar('papel')">Papel</button>
+            <button onclick="jugar('tijera')">Tijera</button>
+            <button class="reiniciar" onclick="reiniciarJuego()">Volver a 
+                jugar
+            </button>
+        </div>
+        <div class="resultados">
+            <p id="historial"></p>
+            <p>Jugador1: <span id="jugador1">0</span> | Jugador2: <span id="jugador2">0</span></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

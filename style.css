@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #f0f4f8;
+    text-align: center;
+    padding: 300px 40px 40px 40px;
+}
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.botones button {
+    font-size: 22px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    transition: background 0.3s;
+}
+.botones .reiniciar {
+    margin-top: 15px;
+    background-color: red;
+}
+.botones .reiniciar:hover {
+    background-color: #9b0000;
+}
+.botones button:hover {
+    background-color: #388e3c;
+}
+.resultados {
+    margin-top: 20px;
+    font-size: 18px;
+}
