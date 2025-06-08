@@ -1,4 +1,4 @@
-const opciones = ["piedra", "papel", "tijera"];
+const opciones = ["Piedra", "Papel", "Tijera"];
 
 
 let victoriasJugador1 = 0;
@@ -24,9 +24,9 @@ function jugar(eleccionJugador1) {
         resultado = `Empate. Ambos eligieron ${eleccionJugador1}.`; empateTotal++;
         console.log(`Empate.`);
     } else if (
-        (eleccionJugador1 === "piedra" && eleccionJugador2 === "tijera") ||
-        (eleccionJugador1 === "papel" && eleccionJugador2 === "piedra") || 
-        (eleccionJugador1 === "tijera" && eleccionJugador2 === "papel")
+        (eleccionJugador1 === "Piedra" && eleccionJugador2 === "Tijera") ||
+        (eleccionJugador1 === "Papel" && eleccionJugador2 === "Piedra") || 
+        (eleccionJugador1 === "Tijera" && eleccionJugador2 === "Papel")
     ) {
         resultado = `¡Ganaste! ${eleccionJugador1} vence a ${eleccionJugador2}.`;
         victoriasJugador1++;
@@ -56,11 +56,15 @@ function reiniciarJuego() {
     console.log(`Juego reiniciado.`);
 
     document.getElementById("historial").innerHTML = "";
+    document.getElementById("jugador1").textContent = "0";
+    document.getElementById("jugador2").textContent = "0";
 }
 
 function actualizarHistorial() {
     const historialElement = document.getElementById("historial");
-    historialElement.innerHTML = "";
+    historialElement.innerHTML = historial.map(item => `<p>${item.resultado} (Jugador1: ${item.jugador1}, Jugador2: ${item.jugador2})</p>`).join("");
 
+    document.getElementById("jugador1").textContent = victoriasJugador1;
+    document.getElementById("jugador2").textContent = victoriasJugador2;
 }
 
