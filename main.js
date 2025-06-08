@@ -1,5 +1,5 @@
 const opciones = ["Piedra", "Papel", "Tijera"];
-const MAX_RONDAS = 3;
+let MAX_RONDAS = 5;
 
 let victoriasJugador1 = 0;
 let victoriasJugador2 = 0;
@@ -7,6 +7,18 @@ let empateTotal = 0;
 let rondasJugadas = 0;
 
 let historial = [];
+
+function pedirRondas() {
+    let rondas = prompt("¿Cuántas rondas quieres jugar?", "5");
+
+    rondas = parseInt(rondas);
+    if(isNaN(rondas) || rondas <= 0) {
+        alert("Entrada no válida. Se jugarán 5 rondas por defecto.");
+        MAX_RONDAS = 5;
+    } else {
+        MAX_RONDAS = rondas;
+    }
+}
 
 function generarEleccionJugador2() {
     const i = Math.floor(Math.random() * opciones.length);
@@ -75,6 +87,9 @@ function jugar(eleccionJugador1) {
 }
 
 function reiniciarJuego() {
+
+pedirRondas();
+
     victoriasJugador1 = 0;
     victoriasJugador2 = 0;
     empateTotal = 0;
@@ -96,3 +111,4 @@ function actualizarHistorial() {
     document.getElementById("jugador2").textContent = victoriasJugador2;
 }
 
+pedirRondas();
