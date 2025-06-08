@@ -1,0 +1,1 @@
+Esto es un simulador contra la maquina de un piedra papel o tijera.
